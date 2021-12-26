@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <title>code</title>
+</head>
+<body>
+
+    <button class="btn btn-primary" id="toastbtn" onclick="showhide()">
+        show and hide
+    </button>
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 12;">
+        <div class="toast" id="mytoast">
+            <div class="toast-header">
+                <strong class="me-auto">header</strong>
+                <small> 11 mins ago </small>
+                <button class="btn-close" onclick="showhide()"></button>
+            </div>
+            <div class="toast-body">
+                Hello, world! This is a toast message.
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script>
+    const mytoast=document.getElementById("mytoast");
+    function showhide(){
+        mytoast.classList.toggle('show')
+    }
+</script>
+<script src="./js/bootstrap.bundle.js"></script>
